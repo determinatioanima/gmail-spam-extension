@@ -1,0 +1,27 @@
+{
+	"manifest_version" : 2,
+	"name" : "鐵人賽-使用vue打造ContentUI",
+	"description" : "",
+	"version" : "2.0",
+    "page_action": {
+        "default_title": "",
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+	"content_scripts" : [
+		{
+			"matches" : ["*://mail.google.com/*","file:///*"],
+			"js" : ["jquery-3.1.1.min.js","content.js", "semantic.min.js", "jquery-ui.min.js"],
+			"css" : ["animate.css", "semantic.min.css", "my.css", "jquery-ui.min.css"]
+		}
+	],
+    "background" : {
+        "scripts" : ["event.js"],
+        "persistent" : false
+    },
+	"permissions" : [
+		"tabs",
+		"http://meichu2017-determinatioanima.c9users.io/",
+		"https://meichu2017-determinatioanima.c9users.io/"
+	]
+}
